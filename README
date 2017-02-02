@@ -1,0 +1,34 @@
+CS 111 - Project 1B: I/O and IPC	Name: Uday Shankar Alla	 ID:404428077
+
+The following README file contains information about each of the following
+submissions:
+1)client.c
+2)server.c
+3)Makefile
+4)my.key
+====================================================================================
+client.c and server.c
+====================================================================================
+1)client makes a TCP socket connection to server provided portnumber through args.
+2)client supports --log=<file> option
+3)client and server support --encryption option
+4)Used the "twofish" encryption algorith in "cfb" mode.
+5)Used the tutorial provided in the spec to implement the socket.
+6)Both the client and server have two threads each to read and write.
+
+====================================================================================
+Makefile
+====================================================================================
+A simple makefile that has the following targets:
+1)default- simply compiles client and server with options -pthread and -lmcrypt
+  so as to allow threading and access of libmcrypt.
+2)client-compiles the client only
+3)server-compiles the server only
+4)clean- deletes all (intermediary files)
+  buffer files, .o files and executables created.
+5)dist- to tar the makefile, readme, my.key, client.c, server.c in a tarball
+
+====================================================================================
+my.key
+====================================================================================
+contains the key for the encryption and decryption options.
